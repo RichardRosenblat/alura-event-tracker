@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { obterId } from '../../util';
 import style from './Formulario.module.scss';
-import { listaDeEventoState } from '../../state/atom';
+import { listaDeEventosState } from '../../state/atom';
 
 const Formulario: React.FC = () => {
 
-  const setListaDeEventos = useSetRecoilState(listaDeEventoState)
+  const setListaDeEventos = useSetRecoilState(listaDeEventosState)
 
   const [descricao, setDescricao] = useState('')
   const [dataInicio, setDataInicio] = useState('')
