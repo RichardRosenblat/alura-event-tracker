@@ -3,7 +3,7 @@ import { IEvento } from "../../interfaces/IEvento"
 import { listaDeEventosState } from "../atom"
 
 const useAtualizarEvento = () => {
-  const setListaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState)
+  const setListaDeEventos = useSetRecoilState(listaDeEventosState)
   return (evento: IEvento) => {
     return setListaDeEventos(listaAntiga => {
       const indice = listaAntiga.findIndex(evt => evt.id === evento.id)
